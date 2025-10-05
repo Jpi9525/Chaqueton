@@ -1,0 +1,105 @@
+[gd_scene load_steps=10 format=3 uid="uid://d03wh4055k1uf"]
+
+[ext_resource type="Texture2D" uid="uid://bopw24sepalm6" path="res://Scenes/WhatsApp_Image_2025-10-04_at_5.32.47_PM-removebg-preview (1).png" id="1_2vrla"]
+[ext_resource type="Texture2D" uid="uid://cqnr0av0w76bj" path="res://Scenes/gaelmierda2 (1).png" id="1_3cn6f"]
+
+[sub_resource type="GDScript" id="GDScript_dfm56"]
+script/source = "extends CharacterBody2D
+
+
+const SPEED = 300.0
+const JUMP_VELOCITY = -400.0
+
+
+func _physics_process(delta: float) -> void:
+	# Add the gravity.
+	if not is_on_floor():
+		velocity += get_gravity() * delta
+
+	# Handle jump.
+	if Input.is_action_just_pressed(\"ui_accept\") and is_on_floor():
+		velocity.y = JUMP_VELOCITY
+
+	# Get the input direction and handle the movement/deceleration.
+	# As good practice, you should replace UI actions with custom gameplay actions.
+	var direction := Input.get_axis(\"ui_left\", \"ui_right\")
+	
+	if direction > 0:
+		$AnimatedSprite2D.scale.x = 1
+	elif direction < 0:
+		$AnimatedSprite2D.scale.x = -1
+		
+	if direction:
+		velocity.x = direction * SPEED
+		if is_on_floor():
+			$AnimatedSprite2D.play(\"Running\")
+	else:
+		velocity.x = move_toward(velocity.x, 0, SPEED)
+		if is_on_floor():
+			$AnimatedSprite2D.play(\"Idle\")
+
+
+	move_and_slide()
+"
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yhfw1"]
+radius = 31.0
+height = 78.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6phhs"]
+atlas = ExtResource("1_2vrla")
+region = Rect2(0, 0, 500, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ru5oq"]
+atlas = ExtResource("1_3cn6f")
+region = Rect2(0, 0, 500, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7xofo"]
+atlas = ExtResource("1_3cn6f")
+region = Rect2(500, 0, 500, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yyxj1"]
+atlas = ExtResource("1_3cn6f")
+region = Rect2(1000, 0, 500, 500)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bkaji"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6phhs")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ru5oq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7xofo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yyxj1")
+}],
+"loop": true,
+"name": &"Running",
+"speed": 15.0
+}]
+
+[node name="Robot" type="CharacterBody2D"]
+position = Vector2(3, -5)
+script = SubResource("GDScript_dfm56")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, 25)
+shape = SubResource("CapsuleShape2D_yhfw1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(6, 34.000004)
+scale = Vector2(0.2225, 0.22824998)
+sprite_frames = SubResource("SpriteFrames_bkaji")
+animation = &"Idle"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
