@@ -1,0 +1,60 @@
+[gd_scene load_steps=9 format=3 uid="uid://bl2263snmmmft"]
+
+[ext_resource type="Script" uid="uid://cit4tjrrfugqw" path="res://character_body_2d.gd" id="1_p18od"]
+[ext_resource type="Texture2D" uid="uid://yad2mw5kat0v" path="res://WhatsApp_Image_2025-10-04_at_5.32.48_PM__2_-removebg-preview.png" id="2_q74uv"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_odqw8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p18od"]
+atlas = ExtResource("2_q74uv")
+region = Rect2(0, 0, 215, 262)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q74uv"]
+atlas = ExtResource("2_q74uv")
+region = Rect2(215, 0, 215, 262)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nd2m5"]
+atlas = ExtResource("2_q74uv")
+region = Rect2(430, 0, 215, 262)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vwfch"]
+atlas = ExtResource("2_q74uv")
+region = Rect2(645, 0, 215, 262)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qg758"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p18od")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q74uv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nd2m5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vwfch")
+}],
+"loop": true,
+"name": &"Running",
+"speed": 5.0
+}]
+
+[node name="Astronauta" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_p18od")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("CapsuleShape2D_odqw8")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+sprite_frames = SubResource("SpriteFrames_qg758")
+animation = &"Running"
+offset = Vector2(-3, -3)
