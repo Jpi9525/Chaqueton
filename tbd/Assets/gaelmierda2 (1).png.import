@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfjidudpny27j"
-path="res://.godot/imported/WhatsApp Image 2025-10-04 at 8.52.18 PM.jpeg-411cedf77192ca89add3e871f11d02a5.ctex"
+uid="uid://cqnr0av0w76bj"
+path="res://.godot/imported/gaelmierda2 (1).png-b35928cb0463fd42b217b2aa22551285.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/WhatsApp Image 2025-10-04 at 8.52.18 PM.jpeg"
-dest_files=["res://.godot/imported/WhatsApp Image 2025-10-04 at 8.52.18 PM.jpeg-411cedf77192ca89add3e871f11d02a5.ctex"]
+source_file="res://Assets/gaelmierda2 (1).png"
+dest_files=["res://.godot/imported/gaelmierda2 (1).png-b35928cb0463fd42b217b2aa22551285.ctex"]
 
 [params]
 

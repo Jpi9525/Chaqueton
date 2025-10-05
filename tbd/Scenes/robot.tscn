@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://d03wh4055k1uf"]
 
-[ext_resource type="Texture2D" uid="uid://bopw24sepalm6" path="res://Scenes/WhatsApp_Image_2025-10-04_at_5.32.47_PM-removebg-preview (1).png" id="1_2vrla"]
-[ext_resource type="Texture2D" uid="uid://cqnr0av0w76bj" path="res://Scenes/gaelmierda2 (1).png" id="1_3cn6f"]
+[ext_resource type="Texture2D" uid="uid://bopw24sepalm6" path="res://Assets/WhatsApp_Image_2025-10-04_at_5.32.47_PM-removebg-preview (1).png" id="1_2vrla"]
+[ext_resource type="Texture2D" uid="uid://cqnr0av0w76bj" path="res://Assets/gaelmierda2 (1).png" id="1_3cn6f"]
 
 [sub_resource type="GDScript" id="GDScript_dfm56"]
 script/source = "extends CharacterBody2D

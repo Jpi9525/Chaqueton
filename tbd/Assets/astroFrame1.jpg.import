@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpsknckela8wn"
-path="res://.godot/imported/WhatsApp_Image_2025-10-04_at_5.32.48_PM__2_-removebg-preview.png-ca271586f149715de8813b721ff8c872.ctex"
+uid="uid://c8slbale5t6tf"
+path="res://.godot/imported/astroFrame1.jpg-2a7b30fe491542019279274661785a46.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/WhatsApp_Image_2025-10-04_at_5.32.48_PM__2_-removebg-preview.png"
-dest_files=["res://.godot/imported/WhatsApp_Image_2025-10-04_at_5.32.48_PM__2_-removebg-preview.png-ca271586f149715de8813b721ff8c872.ctex"]
+source_file="res://Assets/astroFrame1.jpg"
+dest_files=["res://.godot/imported/astroFrame1.jpg-2a7b30fe491542019279274661785a46.ctex"]
 
 [params]
 

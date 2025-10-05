@@ -1,27 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://bl2263snmmmft"]
+[gd_scene load_steps=4 format=3 uid="uid://bl2263snmmmft"]
 
-[ext_resource type="Script" uid="uid://cit4tjrrfugqw" path="res://Scripts/character_body_2d.gd" id="1_p18od"]
-[ext_resource type="Texture2D" uid="uid://yad2mw5kat0v" path="res://Assets/WhatsApp_Image_2025-10-04_at_5.32.48_PM__2_-removebg-preview.png" id="2_q74uv"]
+[ext_resource type="Script" uid="uid://cit4tjrrfugqw" path="res://Scripts/Astro.gd" id="1_p18od"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_odqw8"]
 radius = 65.0
 height = 210.0
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_p18od"]
-atlas = ExtResource("2_q74uv")
-region = Rect2(0, 0, 215, 262)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_q74uv"]
-atlas = ExtResource("2_q74uv")
-region = Rect2(215, 0, 215, 262)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_nd2m5"]
-atlas = ExtResource("2_q74uv")
-region = Rect2(430, 0, 215, 262)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_vwfch"]
-atlas = ExtResource("2_q74uv")
-region = Rect2(645, 0, 215, 262)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_qg758"]
 animations = [{
@@ -30,19 +13,7 @@ animations = [{
 "name": &"Idle",
 "speed": 5.0
 }, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_p18od")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_q74uv")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_nd2m5")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_vwfch")
-}],
+"frames": [],
 "loop": true,
 "name": &"Running",
 "speed": 5.0
