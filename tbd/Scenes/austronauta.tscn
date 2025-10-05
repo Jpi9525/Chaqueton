@@ -4,6 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://yad2mw5kat0v" path="res://Assets/WhatsApp_Image_2025-10-04_at_5.32.48_PM__2_-removebg-preview.png" id="2_q74uv"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_odqw8"]
+radius = 65.0
+height = 210.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p18od"]
 atlas = ExtResource("2_q74uv")
@@ -55,6 +57,9 @@ script = ExtResource("1_p18od")
 shape = SubResource("CapsuleShape2D_odqw8")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+position = Vector2(-26, -9)
 sprite_frames = SubResource("SpriteFrames_qg758")
 animation = &"Running"
 offset = Vector2(-3, -3)
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
