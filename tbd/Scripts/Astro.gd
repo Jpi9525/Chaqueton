@@ -24,11 +24,14 @@ func _physics_process(delta: float) -> void:
 		$AnimatedSprite2D.scale.x = 1
 	elif direction < 0:
 		$AnimatedSprite2D.scale.x = -1
-
-	
+		
 	if direction:
 		velocity.x = direction * SPEED
+		if is_on_floor():
+			$AnimatedSprite2D.play("Running")
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
+		if is_on_floor():
+			$AnimatedSprite2D.play("Idle")
 
 	move_and_slide()

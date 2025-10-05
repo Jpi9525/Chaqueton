@@ -1,19 +1,56 @@
-[gd_scene load_steps=4 format=3 uid="uid://bl2263snmmmft"]
+[gd_scene load_steps=11 format=3 uid="uid://bl2263snmmmft"]
 
-[ext_resource type="Script" uid="uid://cit4tjrrfugqw" path="res://Scripts/Astro.gd" id="1_p18od"]
+[ext_resource type="Script" uid="uid://cit4tjrrfugqw" path="res://Scripts/Astro.gd" id="1_ll2k8"]
+[ext_resource type="Texture2D" uid="uid://dpsknckela8wn" path="res://Assets/WhatsApp_Image_2025-10-04_at_5.32.48_PM__2_-removebg-preview (2).png" id="2_lhnqo"]
+[ext_resource type="Texture2D" uid="uid://yad2mw5kat0v" path="res://Assets/WhatsApp_Image_2025-10-04_at_5.32.48_PM__2_-removebg-preview.png" id="2_q74uv"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_odqw8"]
 radius = 65.0
 height = 210.0
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_65hck"]
+atlas = ExtResource("2_lhnqo")
+region = Rect2(27, 0, 220, 262)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lhnqo"]
+atlas = ExtResource("2_q74uv")
+region = Rect2(27, 0, 203, 262)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ph2co"]
+atlas = ExtResource("2_q74uv")
+region = Rect2(230, 0, 203, 262)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7746g"]
+atlas = ExtResource("2_q74uv")
+region = Rect2(433, 0, 203, 262)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bv4n4"]
+atlas = ExtResource("2_q74uv")
+region = Rect2(636, 0, 203, 262)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_qg758"]
 animations = [{
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_65hck")
+}],
 "loop": true,
 "name": &"Idle",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lhnqo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ph2co")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7746g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bv4n4")
+}],
 "loop": true,
 "name": &"Running",
 "speed": 5.0
@@ -22,7 +59,7 @@ animations = [{
 [node name="Astronauta" type="Node2D"]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-script = ExtResource("1_p18od")
+script = ExtResource("1_ll2k8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 shape = SubResource("CapsuleShape2D_odqw8")
@@ -30,7 +67,7 @@ shape = SubResource("CapsuleShape2D_odqw8")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 position = Vector2(-26, -9)
 sprite_frames = SubResource("SpriteFrames_qg758")
-animation = &"Running"
+animation = &"Idle"
 offset = Vector2(-3, -3)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
