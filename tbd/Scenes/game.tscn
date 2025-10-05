@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cun4021b8ghcg"]
 
-[ext_resource type="PackedScene" uid="uid://dh5ky6spr1q8r" path="res://fondo.tscn" id="1_e2o6t"]
-[ext_resource type="PackedScene" uid="uid://bl2263snmmmft" path="res://austronauta.tscn" id="2_feb5d"]
+[ext_resource type="PackedScene" uid="uid://dh5ky6spr1q8r" path="res://Scenes/fondo.tscn" id="1_e2o6t"]
+[ext_resource type="PackedScene" uid="uid://bl2263snmmmft" path="res://Scenes/austronauta.tscn" id="2_feb5d"]
 
 [node name="Game" type="Node2D"]
 position = Vector2(129, 111)

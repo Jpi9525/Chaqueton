@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://bl2263snmmmft"]
 
-[ext_resource type="Script" uid="uid://cit4tjrrfugqw" path="res://character_body_2d.gd" id="1_p18od"]
-[ext_resource type="Texture2D" uid="uid://yad2mw5kat0v" path="res://WhatsApp_Image_2025-10-04_at_5.32.48_PM__2_-removebg-preview.png" id="2_q74uv"]
+[ext_resource type="Script" uid="uid://cit4tjrrfugqw" path="res://Scripts/character_body_2d.gd" id="1_p18od"]
+[ext_resource type="Texture2D" uid="uid://yad2mw5kat0v" path="res://Assets/WhatsApp_Image_2025-10-04_at_5.32.48_PM__2_-removebg-preview.png" id="2_q74uv"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_odqw8"]
 
